@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Redirect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the button to roll the dice!</h1>
+    <button onclick="rollDice()">Let's Go</button>
+
+    <script>
+        function rollDice() {
+            let urls = [
+                "https://nettskjema.no/a/test-control",
+                "https://nettskjema.no/a/test-treatment"
+            ];
+            let randomIndex = Math.floor(Math.random() * 2); // 50/50 chance
+            window.location.href = urls[randomIndex];
+        }
+    </script>
+</body>
+</html>
