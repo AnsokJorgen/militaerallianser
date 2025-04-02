@@ -105,5 +105,19 @@ På oppdrag fra Universitetet i Stavanger har Sikt – Kunnskapssektorens tjenes
         <p><strong>Personvernombud: Rolf Jegervatn</strong>: <a href="mailto:rolf.jegervatn@uis.no">rolf.jegervatn@uis.no</a></p>
         <p>Hvis du har spørsmål knyttet til vurderingen som er gjort av personverntjenestene fra Sikt, kan du ta kontakt via epost: personverntjenester@sikt.no, eller telefon: 73 98 40 40.</p>
     </div>
+
+    <div class="button-container">
+        <button class="start-button" onclick="redirectToRandomPage()" aria-label="Jeg samtykker, ta meg til undersøkelsen">Jeg samtykker, ta meg til undersøkelsen</button>
+    </div>
+
+    <script>
+        function redirectToRandomPage() {
+            const urls = [
+                'https://nettskjema.no/a/a01', <!--control group-->
+                'https://nettskjema.no/a/a0' <!--treatment group-->
+            ];
+            window.location.href = urls[Math.floor(Math.random() * urls.length)];
+        }
+    </script>
 </body>
 </html>
